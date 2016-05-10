@@ -10,3 +10,6 @@ install: composer.phar
 
 install-dev: composer.phar
 	./composer.phar install --dev --prefer-dist --no-interaction
+
+server:
+	php -S 0.0.0.0:8000 -t public/

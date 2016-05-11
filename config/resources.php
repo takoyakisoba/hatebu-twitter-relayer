@@ -1,5 +1,5 @@
 <?php
 
-// $container['foo'] = function ($c) {
-//     // bar
-// }
+$container['twitter_api.client'] = function ($c) {
+    return new \App\TwitterApi\Client();
+};

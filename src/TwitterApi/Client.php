@@ -20,12 +20,12 @@ class Client
         );
     }
 
-    public function get(string $endpoint, array $options = [], int $retryLimit = self::DEFAULT_RETRY_LIMIT)
+    public function request(string $method, string $endpoint, array $options = [], int $retryLimit = self::DEFAULT_RETRY_LIMIT)
     {
         $client = $this->client;
 
-        return RequestRetryHelper::request(function () use ($client, $endpoint, $options) {
-            return $client->get($endpoint, $options);
+        return RequestRetryHelper::request(function () use ($method, $client, $endpoint, $options) {
+            return $client->{$method}($endpoint, $options);
         }, $retryLimit);
     }
 }

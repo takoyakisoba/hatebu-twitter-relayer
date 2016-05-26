@@ -20,8 +20,7 @@ class EventEntity
 
     public function verify()
     {
-        // FIXME:
-        return true;
+        return $this->key === getenv('HATENABOOKMARK_PRESHARED_KEY');
     }
 
     public function validate()

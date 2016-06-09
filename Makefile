@@ -1,4 +1,4 @@
-.PHONY: composer.phar install install-dev server
+.PHONY: install install-dev server
 
 composer.phar:
 	php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

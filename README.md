@@ -12,13 +12,13 @@
 0. このリポジトリをクローン
     * `https://github.com/mohimovi/hatebu-twitter-relayer.git`
 0. 依存パッケージをインストール
-    * `make install`
+    * `make setup`
 0. 環境変数 (Twitter APIのクレデンシャル、はてぶとの事前共有鍵) を設定
     * `cp .env.example .env` したあと、 `.env` を編集
 0. Webサーバの設定
     * すべてのリクエストを `public/index.php` にhandleさせる
     * エンドポイント: `http://some-domain.com/webhook/hatebu-notification`
-        * エンドポイントは`config/routes.php` で変えられます
+        * エンドポイントは`config/routes.php` で変更可能
 0. はてぶの設定
     * `http://b.hatena.ne.jp/$USER_NAME/config#tabmenu-config_table_coop`
     * 「受け取るイベントの種類」は、「ブックマークの追加/更新/削除」を選択

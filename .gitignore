@@ -1,6 +1,12 @@
-composer.phar
-composer.lock
+# Dir
 vendor/
-.env
+.idea/
+
+# Extension
 *.swp
 *~
+
+# File
+composer.phar
+composer.lock
+.env
